@@ -1,0 +1,10 @@
+{% load static %}
+<h1>Изменить плотву</h1>
+
+<form method="POST">
+    {% csrf_token %}
+    <input type="text" value="{{ item.name }}" required name="name" placeholder="Имя">
+    <input type="text" value="{{ item.male }}" required name="male" placeholder="Пол">
+    <input type="text" value="{{ item.age }}" required name="age" placeholder="Возраст">
+    <input name="submit" type="submit">
+</form>

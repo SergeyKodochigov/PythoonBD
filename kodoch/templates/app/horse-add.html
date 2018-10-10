@@ -1,0 +1,10 @@
+{% load static %}
+<h1>Добавить лошадь</h1>
+
+<form method="POST">
+    {% csrf_token %}
+    <input type="text" required name="name" placeholder="Имя">
+    <input type="text" required name="male" placeholder="Пол">
+    <input type="text" required name="age" placeholder="Возраст">
+    <input name="submit" type="submit">
+</form>

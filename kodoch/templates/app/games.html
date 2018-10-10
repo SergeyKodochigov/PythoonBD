@@ -1,0 +1,31 @@
+<h1>Список игр</h1>
+
+<style type="text/css">
+.tftable {font-size:12px;color:#333333;width:100%;border-width: 1px;border-color: #729ea5;border-collapse: collapse;}
+.tftable th {font-size:12px;background-color:#acc8cc;border-width: 1px;padding: 8px;border-style: solid;border-color: #729ea5;text-align:left;}
+.tftable tr {background-color:#ffffff;}
+.tftable td {font-size:12px;border-width: 1px;padding: 8px;border-style: solid;border-color: #729ea5;}
+.tftable tr:hover {background-color:#ffff99;}
+</style>
+
+<table class="tftable" border="1">
+
+<tr>
+    <th>ДАТА</th>
+    <th>ВРЕМЯ</th>
+    <th>МЕСТО</th>
+    <th>НАЗВАНИЕ ИГРЫ</th>
+    <th>ФУНКЦИЯ</th>
+    </tr>
+
+     {% for item in data %}
+<tr>
+    <td>{{ item.date }}</td>
+    <td>{{ item.time }}</td>
+    <td>{{ item.place }}</td>
+    <td>{{ item.game_name }}</td>
+    <td><a href="?edit={{ item.game_id }}">ИЗМЕНИТЬ</a> / <a href="?delete={{ item.game_id }}">УДАЛИТЬ</a></td>
+</tr>
+ {% endfor %}
+</table>
+<a href="?add">Добавить игру</a>

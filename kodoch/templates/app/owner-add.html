@@ -1,0 +1,11 @@
+{% load static %}
+<h1>Добавить дауна</h1>
+
+<form method="POST">
+    {% csrf_token %}
+    <input type="text" required name="name" placeholder="Имя">
+    <input type="text" required name="rate" placeholder="Оценка">
+    <input type="text" required name="age" placeholder="Возраст">
+    <input type="text" required name="address" placeholder="Адресс">
+    <input name="submit" type="submit">
+</form>

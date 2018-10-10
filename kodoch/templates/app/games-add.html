@@ -1,0 +1,11 @@
+{% load static %}
+<h1>Добавить игру</h1>
+
+<form method="POST">
+    {% csrf_token %}
+    <input type="text" required name="game_name" placeholder="Название игры">
+    <input type="date" required name="date" placeholder="Дата">
+    <input type="text" required name="time" placeholder="Время">
+    <input type="text" required name="place" placeholder="Место">
+    <input name="submit" type="submit">
+</form>

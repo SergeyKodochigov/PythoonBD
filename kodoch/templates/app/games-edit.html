@@ -1,0 +1,11 @@
+{% load static %}
+<h1>Изменить игру</h1>
+
+<form method="POST">
+    {% csrf_token %}
+    <input type="datetime" value="{{ item.game_name }}" required name="game_name" placeholder="Название игры">
+    <input type="text" value="{{ item.date }}"  required name="date" placeholder="Дата">
+    <input type="text" value="{{ item.time }}" required name="time" placeholder="Время">
+    <input type="text" value="{{ item.place }}" required name="place" placeholder="Место">
+    <input name="submit" type="submit">
+</form>

@@ -1,0 +1,11 @@
+{% load static %}
+<h1>Изменить жокея</h1>
+
+<form method="POST">
+    {% csrf_token %}
+    <input type="text" value="{{ item.name }}" required name="name" placeholder="Имя">
+    <input type="text" value="{{ item.age }}" required name="age" placeholder="Возраст">
+    <input type="text" value="{{ item.rate }}" required name="rate" placeholder="Оценка">
+    <input type="text" value="{{ item.address }}" required name="address" placeholder="Адресс">
+    <input name="submit" type="submit">
+</form>
